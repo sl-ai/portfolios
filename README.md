@@ -1,0 +1,32 @@
+# QA & Engineering Leader Portfolio (React + Tailwind)
+
+Modern, responsive portfolio for a strategic QA and engineering leader with 20+ years of experience across SaaS, cloud-native platforms, and AI solutions.
+
+## Tech
+- React 18 + Vite
+- Tailwind CSS
+- React Router
+- Plausible Analytics (optional)
+
+## Getting Started
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
+
+## Customize
+- Colors/fonts: `tailwind.config.cjs`
+- SEO/Open Graph: `index.html`
+- Analytics: update Plausible `data-domain` in `index.html`
+- Pages: `src/pages/*`
+- Components: `src/components/*`
+- Resume: replace `public/resume.pdf`
+- Dashboard images: replace `public/placeholders/*`
+
+## Accessibility & SEO
+- Semantic HTML, keyboard-friendly nav, descriptive meta tags
+
+## Deployment
+- Deploy the static build to Netlify/Vercel/GitHub Pages.
