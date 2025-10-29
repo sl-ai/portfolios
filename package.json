@@ -1,8 +1,11 @@
 {
-  "name": "qa-engineering-leader-portfolio",
+  "name": "sl-ai-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
