@@ -1,14 +1,18 @@
 # QA & Engineering Leader Portfolio (React + Tailwind)
 
-Modern, responsive portfolio for a strategic QA and engineering leader with 20+ years of experience across SaaS, cloud-native platforms, and AI solutions.
+Modern, responsive portfolio for a engineering leader with 20+ years of experience across SaaS, cloud-native platforms, and AI solutions.
 
 ## Tech
+- Node.js 22
 - React 18 + Vite
 - Tailwind CSS
 - React Router
 - Plausible Analytics (optional)
 
 ## Getting Started
+
+If you are using `nvm`, you can run `nvm use` in the project root to automatically switch to the correct Node.js version.
+
 ```bash
 npm install
 npm run dev
