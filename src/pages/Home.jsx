@@ -1,5 +1,6 @@
-import Section from '../components/Section.jsx';
-import { usePersona } from '../contexts/PersonaContext.jsx';
+import Section from "../components/Section.jsx";
+import { usePersona } from "../contexts/PersonaContext.jsx";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { persona } = usePersona();
@@ -7,13 +8,16 @@ export default function Home() {
   return (
     <div>
       <section className="relative overflow-hidden">
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal-500/20 blur-3xl" aria-hidden="true" />
+        <div
+          className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal-500/20 blur-3xl"
+          aria-hidden="true"
+        />
         <div className="container-max py-6 sm:py-8">
           <div className="grid gap-8 sm:grid-cols-[auto_1fr] items-center">
             <div className="w-48 h-48 mx-auto sm:mx-0 rounded-full overflow-hidden border-4 border-teal-500/20">
-              <img 
-                src="/profile_lightG.PNG" 
-                alt="Shin Lee" 
+              <img
+                src="/profile_lightG.PNG"
+                alt="Shin Lee"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -22,13 +26,20 @@ export default function Home() {
                 Shin Lee
               </h1>
               <p className="lead mt-4 max-w-2xl">
-              Leading large-scale digital and cloud-native transformations, architecting high-availability disaster recovery (DR) solutions, and driving substantial improvements in operational efficiency, system uptime (often achieving 99.9%+), and revenue generation.
+                Leading large-scale digital and cloud-native transformations,
+                architecting high-availability disaster recovery (DR) solutions,
+                and driving substantial improvements in operational efficiency,
+                system uptime (often achieving 99.9%+), and revenue generation.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="/resume" className="btn-primary">View Resume</a>
-                <a href="/projects" className="btn-outline">Explore Projects</a>
+                <Link to="/resume" className="btn-primary">
+                  View Resume
+                </Link>
+                <Link to="/projects" className="btn-outline">
+                  Explore Projects
+                </Link>
               </div>
-            </div>              
+            </div>
           </div>
         </div>
       </section>
@@ -36,7 +47,9 @@ export default function Home() {
         <div className="container-max">
           <div className="mb-6">
             <h2 className="section-title">Focus Areas</h2>
-            <p className="lead mt-2 max-w-3xl">Key areas of expertise and specialization</p>
+            <p className="lead mt-2 max-w-3xl">
+              Key areas of expertise and specialization
+            </p>
           </div>
           <div className="card p-6 max-w-4xl mx-auto">
             <ul className="grid gap-3 sm:grid-cols-2 text-white/80">
@@ -57,9 +70,18 @@ export default function Home() {
       >
         <div className="grid gap-6 sm:grid-cols-3">
           {[
-            { title: 'Leadership', text: 'Scaled teams, designed org-wide strategies, and drove talent development.' },
-            { title: 'Execution', text: 'Built reliable processes and platforms that accelerate delivery.' },
-            { title: 'Analytics', text: 'Enabled insight-driven decision making with data and metrics.' },
+            {
+              title: "Leadership",
+              text: "Scaled teams, designed org-wide strategies, and drove talent development.",
+            },
+            {
+              title: "Execution",
+              text: "Built reliable processes and platforms that accelerate delivery.",
+            },
+            {
+              title: "Analytics",
+              text: "Enabled insight-driven decision making with data and metrics.",
+            },
           ].map((c) => (
             <div key={c.title} className="card p-5">
               <h3 className="font-semibold">{c.title}</h3>
@@ -71,5 +93,3 @@ export default function Home() {
     </div>
   );
 }
-
-
