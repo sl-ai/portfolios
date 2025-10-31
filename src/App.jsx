@@ -20,10 +20,10 @@ export default function App() {
           <Navbar />
           <main className="flex-1">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/leadership" element={<Leadership />} />
+              <Route index element={<Home />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="leadership" element={<Leadership />} />
             </Routes>
           </main>
           <Footer />
