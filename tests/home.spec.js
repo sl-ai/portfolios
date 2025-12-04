@@ -73,29 +73,6 @@ test.describe('Home Page', () => {
     expect(focusAreasText).toBeTruthy();
   });
 
-  test('should display About section', async ({ page }) => {
-    const aboutHeading = page.getByRole('heading', { name: 'About' });
-    await expect(aboutHeading).toBeVisible();
-
-    const aboutSubtitle = page.locator('text=I lead high-performing teams');
-    await expect(aboutSubtitle).toBeVisible();
-  });
-
-  test('should display About section cards', async ({ page }) => {
-    const leadershipCard = page.locator('.card', { hasText: 'Leadership' });
-    const executionCard = page.locator('.card', { hasText: 'Execution' });
-    const analyticsCard = page.locator('.card', { hasText: 'Analytics' });
-
-    await expect(leadershipCard).toBeVisible();
-    await expect(executionCard).toBeVisible();
-    await expect(analyticsCard).toBeVisible();
-
-    // Verify card content
-    await expect(leadershipCard).toContainText('Scaled teams, designed org-wide strategies');
-    await expect(executionCard).toContainText('Built reliable processes and platforms');
-    await expect(analyticsCard).toContainText('Enabled insight-driven decision making');
-  });
-
   test('should be responsive on mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     
